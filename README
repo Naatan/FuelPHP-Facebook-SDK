@@ -1,0 +1,17 @@
+This is a FuelPHP module, so make sure you have modules enabled and clone it in a module folder under the name "Facebook".
+
+For easier use I suggest you create a class "Facebook" under your main classes dir with:
+
+	class Facebook extends \Facebook\Fb {}
+
+Example usage (requires above mentioned class):
+
+	Facebook::require_auth();
+	
+	$me = Facebook::api('/me');
+	var_dump($me);
+
+	$logout_uri = Facebook::getLogoutUri();
+	$logout_uri = Facebook::get_logout_uri();
+
+You can use both camel case and lowercase as I personally loathe camel case.
